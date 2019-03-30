@@ -7,7 +7,7 @@ package ExceptionHandling;
 
 /**
  *
- * @author MD. RAKIBUL HASAN
+ * @author Shreshthajit das
  */
 public class ExceptionHandling{
     public static void main(String[] args) throws InterruptedException{
