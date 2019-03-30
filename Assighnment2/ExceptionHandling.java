@@ -5,10 +5,7 @@
  */
 package ExceptionHandling;
 
-/**
- *
- * @author Shreshthajit das
- */
+
 public class ExceptionHandling{
     public static void main(String[] args) throws InterruptedException{
         Thread t=new Thread();
