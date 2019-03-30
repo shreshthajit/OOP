@@ -2,7 +2,7 @@ package Multithreading;
 
 /**
  *
- * @author MD. RAKIBUL HASAN
+ * @author Shreshthajit Das
  */
 public class SynchronizeThread {
 
