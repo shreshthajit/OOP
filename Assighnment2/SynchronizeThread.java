@@ -1,9 +1,6 @@
 package Multithreading;
 
-/**
- *
- * @author Shreshthajit Das
- */
+
 public class SynchronizeThread {
 
     public static void main(String[] args) throws InterruptedException {
