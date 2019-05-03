@@ -1,25 +1,40 @@
-import java.util.*;
-public class Word_count {
-    public static void main(String[] args){
-        Scanner sc=new Scanner(System.in);
-        String s,w="";
-        int l,i;
-        char ch;
-        System.out.println("Enter the sentence: ");
-        s=sc.nextLine();
-        s=s+ " ";
-        l=s.length();
-        System.out.println("Word\t Length");
-        System.out.println("---------");
-        for(i=0;i<l;i++){
-            ch=s.charAt(i);
-            if(ch!=' '){
-                w=w+ch;
-            }
-            else{
-                System.out.println(w + "\t" + w.length());
-                w="";
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class  String_I_O {
+    public static void main(String[] args) {
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader("C:/Users/ASUS/Desktop/Input_Output/Student.txt"));
+            String s;
+            String[] words = null;
+            int count = 1;
+            while((s = br.readLine()) != null) {
+                words = s.split(" ");
+                for(int i=0; i<words.length; i++) {
+                    if(words[i].equals("")) continue;
+                    for(int j=i+1; j<words.length; j++) {
+                        if(words[i].equals(words[j])) {
+                            words[j] = "";
+                            count++;
+                        }
+                    }
+                    System.out.println("'" + words[i] + "'" + " is " + count + " times.");
+                    words[i] = "";
+                    count = 1;
                 }
-}
+            }
+        } catch(IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                br.close();
+            } catch(IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }
 }
